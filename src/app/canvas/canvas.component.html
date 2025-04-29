@@ -1,0 +1,46 @@
+<div class="app-canvas">
+    <canvas #canvas
+        [width]="canvasWidth"
+        [height]="canvasHeight"
+        (mousedown)="onMouseDown($event)"
+        (mouseup)="onMouseUp($event)"
+        (mousemove)="onMouseMove($event)"
+        (mouseleave)="onMouseLeave($event)">
+    </canvas>
+    <div class="actions-container">
+        <input #fileInput
+            class="input-upload"
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            (change)="onFileUpload($event, fileInput)"/>
+        <button class="btn-upload"
+            id="fileUploadBtn"
+            (click)="fileInput.click()">
+            Upload File
+        </button>
+        <button class="btn-insert-rectangle"
+            id="insertRectBtn"
+            (click)="onInsertShape('rect')">
+            Insert Rectangle
+        </button>
+        <div class="text-input-container">
+            <input #textInput
+                class="input-text"
+                type="text"
+                id="textInput"
+                size="100"
+                (input)="onTextInput(textInput.value)"/>
+            <button class="btn-insert-text"
+                id="insertTextBtn"
+                (click)="onInsertText(textInput.value, textInput)">
+                Insert Text
+            </button>
+        </div>
+    </div>
+    <button class="btn-clear"
+        id="clearBtn"
+        (click)="onClearCanvas()">
+        Clear Canvas
+    </button>
+</div>

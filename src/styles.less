@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: unset;
+    background-color: bisque;
+}
+
+.app-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    gap: 8px;
+
+    canvas {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #000;
+    }
+
+    .actions-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        width: 800px;
+    }
+
+    .input-upload {
+        display: none;
+    }
+
+    button {
+        display: inline-block;
+        width: 200px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #af7319;
+        margin: 4px 2px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .text-input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid #57350a;
+        padding: 4px;
+
+        .input-text {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+}
